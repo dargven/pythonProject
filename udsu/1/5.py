@@ -8,7 +8,11 @@ if np.amax(matrA) > abs(np.amin(matrA)):
     maxs = np.amax(matrA)
 else:
     maxs = abs(np.amin(matrA))
+<<<<<<< HEAD
 matrB = matrA;
+=======
+matrB = matrA
+>>>>>>> afce27b (Initial commit)
 for i in range(len(matrA)):
     for j in range(len(matrA[i])):
         matrB[i][j] = round(matrA[i][j]/abs(maxs))
