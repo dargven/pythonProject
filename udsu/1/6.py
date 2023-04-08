@@ -2,9 +2,9 @@ import numpy as np
 
 N = int(input('n = '))
 M = int(input('m = '))
-matr = np.zeros((N, M))
-for ik in range(len(matr)):
-    for jk in range(len(matr[ik])):
+matrix = np.zeros((N, M))
+for ik in range(len(matrix)):
+    for jk in range(len(matrix[ik])):
         i = ik + 1  # [1...N];
         j = jk + 1
         D = i + j - 1  # Номер диагонали
@@ -15,6 +15,13 @@ for ik in range(len(matr)):
         # Co = D%2#Определитель нечетной диагонали
         # Ce = (D+1)%2#Определитель четной диагонали
         # matr[ik][jk] = Ca*((Ma-j+1)*Ce+(Ma-i+1)*Co)+Cb*((Mb-(N-i))*Ce+(Mb-(N-j))*Co)
-        R = (i + j - 2) * (i + j - 1) // 2 + (i + j) % 2 * (j - i) + i+ (1 - N * N + 2 * N * (i + j - 1) - i - j - (i + j - 2) * (i + j - 1)) * ((i + j - 1) // N)
-        matr[ik][jk]=R
-print(matr)
+        R = (i + j - 2) * (i + j - 1) // 2 + (i + j) % 2 * (j - i) + i + (
+                1 - N * N + 2 * N * (i + j - 1) - i - j - (i + j - 2) * (i + j - 1)) * ((i + j - 1) // N)
+        matrix[ik][jk] = R
+print(matrix)
+# Вводим числа n и m. Создайте массив A[n][m] и заполните его следующим образом
+# (ниже приведен пример для n=4 и m=6):
+# 0 1 3 6 10 14
+# 2 4 7 11 15 18
+# 5 8 12 16 19 21
+# 9 13 17 20 22 23

@@ -1,4 +1,6 @@
 numInBin = 101010101
-numInNorm = int(str(numInBin),base = 2)
+numInNorm = int(str(numInBin), base=2)
 numInDex = hex(numInNorm)[2:]
 print(numInDex)
+# Дано целое число в двоичной системе счисления, т.е. последовательность цифр 0 и 1.
+# Составить программу перевода этого числа в шестнадцатеричную систему счисления.
